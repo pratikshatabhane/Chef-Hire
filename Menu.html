@@ -1,631 +1,226 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chef-Hire</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
-    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Menu Page</title>
+    
+    <!-- fontawesome link here -->
+    <link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/all.min.css">
+    
+    <!-- style link here -->
+    <link rel="stylesheet" href="menu page/style.css">
+    
+
 </head>
-
 <body>
-    <!-- MOBILE NAV -->
-    <div class="mb-nav">
-        <div class="mb-move-item"></div>
-        <div class="mb-nav-item active">
-            <a href="#home">
-                <i class="bx bxs-home"></i>
-            </a>
+    
+    <header class="header">
+        <div class="logo">
+            <img src="images/Chef-Hire-Logo-Final-2.png" alt="">
         </div>
-        <div class="mb-nav-item">
-            <a href="#about">
-                <i class='bx bxs-wink-smile'></i>
-            </a>
+
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="About.html">About</a>
+            <a href="Join us.html">Join us</a>
+            <a href="Menu.html">Menu</a>
+            <a href="Contact us.html">Conatct us</a>
+        </nav>
+
+        <div class="icons">
+            <div id="menu-bar" class="fas fa-bars"></div>
+            <a class="contact-btn" href="Contact us.html">contact</a>
         </div>
-        <div class="mb-nav-item">
-            <a href="#food-menu-section">
-                <i class='bx bxs-food-menu'></i>
-            </a>
-        </div>
-        <div class="mb-nav-item">
-            <a href="#testimonial">
-                <i class='bx bxs-comment-detail'></i>
-            </a>
-        </div>
-    </div>
-    <!-- END MOBILE NAV -->
-    <!-- BACK TO TOP BTN -->
-    <a href="#home" class="back-to-top">
-        <i class="bx bxs-to-top"></i>
-    </a>
-    <!-- END BACK TO TOP BTN -->
- <!-- TOP NAVIGATION -->
- <div class="nav">
-    <div class="menu-wrap">
-        <a href="index.html">
-            <div class="logo">
-                <img src="img/Chef-Hire-Logo-Final-2.png" height="150" width="190">
-            </div>
-        </a>
-        <div class="menu h-xs">
-            <!-- Dropdown for Home -->
-            <div class="menu-item dropdown">
-                <a href="index.html">Home</a>
-                <div class="dropdown-content">
-                    <a href="#home-section-1">BistroConnect</a>
-                    <a href="#home-section-2">Cuisine Craft</a>
+
+    </header>
+
+    <div class="home">
+
+        <div class="main-home">
+            <div class="home-inner-content">
+                <div class="home-image">
+                <img src="menu page/images/background content.png" alt="">
                 </div>
             </div>
 
-            <!-- Dropdown for About -->
-            <div class="menu-item dropdown">
-                <a href="About.html">About</a>
-                <div class="dropdown-content">
-                    <a href="#about-team">Our Team</a>
-                    <a href="#about-company">Our Company</a>
-                </div>
-            </div>
-
-            <!-- Dropdown for Join Us -->
-            <div class="menu-item dropdown">
-                <a href="Join us.html">Join Us</a>
-                <div class="dropdown-content">
-                    <a href="#careers">Join Us As Chef  </a>
-                    <a href="#apply-now">Join us as F&B Consultant</a>
-                    <a href="#apply-now">Join Us as Event Managers</a>
-                   
-                </div>
-            </div>
-
-            <!-- Dropdown for Menu -->
-            <div class="menu-item dropdown">
-                <a href="Menu.html">Menu</a>
-                <div class="dropdown-content">
-                    <a href="#appetizers">Appetizers</a>
-                    <a href="#main-course">Main Course</a>
-                    <a href="#desserts">Desserts</a>
-                    <a href="#drinks">Drinks</a>
-                </div>
-            </div>
-
-            <!-- Dropdown for Contact Us -->
-            <div class="menu-item dropdown">
-                <a href="Contact us.html">Contact Us</a>
-                <div class="dropdown-content">
-                    <a href="#contact-info">Investor Relationship</a>
-                    <a href="#support">Customer relationship</a>
-                </div>
-            </div>
-        </div>
-        <div class="left">
-            <div class="cart-btn">
-                <i class='bx bx-cart-alt'></i>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- END TOP NAVIGATION -->
-
-<!-- Dropdown Menu Styles -->
-<style>
-.menu-item {
-    position: relative;
-    display: inline-block;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown-content a:hover {
-    background-color: #f1f1f1;
-}
-
-.menu-item:hover .dropdown-content {
-    display: block;
-}
-</style>
-    <!-- SECTION HOME -->
-    <section id="home" class="fullheight align-items-center bg-img bg-img-fixed"
-        style="background-image: url(img/ff2.jpg);">
-        <div class="container">
-            <div class="row">
-                <div class="col-6 col-xs-12">
-                    <div class="slogan">
-                        <h1 class="left-to-right play-on-scroll">
-                       Chef-Hire
-                        </h1>
-                        <p class="left-to-right play-on-scroll delay-2">
-                            Introducing.....
-                            <br>Weekly Package
-                            <br>Starting from ₹7999/- only.
-                            <br>Available in Indore only....
-                        </p>
-                        <div class="left-to-right play-on-scroll delay-4">
-                            <button>
-                               Book Now
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- END SECTION HOME -->
-    <!-- SECION ABOUT -->
-    <section class="about fullheight align-items-center" id="about">
-        <section class="about the chef-hire">
-            <div class="container">
-                <div class-="row">
-                    <img srv="img/Yellow and White Cooking Food YouTube Video Intro.mp4">
-                </div>
-            </div>
-        </section>
-        <div class="container">
-            <div class="row">
-                <div class="col-7 h-xs">
-                    <img src="assets/dan-gold-4_jhDO54BYg-unsplash.jpg" alt=""
-                        class="fullwidth left-to-right play-on-scroll">
-                </div>
-                <div class="col-5 col-xs-12 align-items-center">
-                    <div class="about-slogan right-to-left play-on-scroll">
-                        <h3>
-                            <span class="primary-color">We</span> create <span class="primary-color">delicious</span>
-                            memories for <span class="primary-color">you</span>
-                        </h3>
-<section>
-    <div class="conatiner">
-        <div class="row">
-            <div class="col-2 h-xs">
-                <h3>ABOUT CHEF-HIRE</h3>
-                <span class="primary-color"> we</span> create <span class="secondary color"> delicious</span>
-                memories for <span class="primary-color"></span>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-                        <p>
-                           
-                      
-<br>Chef-Hire, a brand of TFCS Kitchen Solutions Ltd., is a one-of-its-kind platform that caters to your personalized food and beverage (F&B) needs. Whether you're planning a special occasion, seeking culinary expertise for your food venture, or simply want to enhance your daily meals with gourmet spices, Chef-Hire is your trusted partner.
-
-​<br>
-
-<br>Elevate Your Events with Cuisine Craft:
-<br>
-<br>Make your events truly unforgettable with Chef-Hire's on-demand access to experienced chefs and servers. Our team of culinary professionals will create customized menus tailored to your preferences, ensuring a gastronomical experience that will tantalize your guests' taste buds.
-<br>Empower Your F&B Venture with BistroConnect:
-<br>
-<br>Starting any  F&B business? Chef-Hire's comprehensive food and restaurant consultancy services will equip you with the knowledge and strategies to navigate the industry successfully. From menu planning and kitchen setup to marketing and customer engagement, we'll support you every step of the way.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- END SECION ABOUT -->
-    <!-- FOOD MENU SECTION -->
-    <section class="align-items-center bg-img bg-img-fixed" id="food-menu-section"
-        style="background-image: url(assets/katherine-chase-4MMK78S7eyk-unsplash.jpg);">
-        <div class="container">
-            <div class="food-menu">
+            <div class="home-inner-content">
+                <div class="home-text-content">
                 <h1>
-                    What will <span class="primary-color">you</span> eat today?
-                </h1>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque alias aliquam eveniet, iure
-                    praesentium dicta ex dolorum inventore itaque minus repudiandae, odio provident? Velit architecto
-                    natus expedita non? Odio, dolorum.
-                </p>
-                <div class="food-category">
-                    <div class="zoom play-on-scroll">
-                        <button class="active" data-food-type="all">
-                            All food
-                        </button>
-                    </div>
-                    <div class="zoom play-on-scroll delay-2">
-                        <button data-food-type="salad">
-                            Salad
-                        </button>
-                    </div>
-                    <div class="zoom play-on-scroll delay-4">
-                        <button data-food-type="lorem">
-                            Lorem
-                        </button>
-                    </div>
-                    <div class="zoom play-on-scroll delay-6">
-                        <button data-food-type="ipsum">
-                            Ipsum
-                        </button>
-                    </div>
-                    <div class="zoom play-on-scroll delay-8">
-                        <button data-food-type="dolor">
-                            Dolor
-                        </button>
-                    </div>
+Chef hire with Cusine Craft</h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae, voluptatem officiis quas illum pariatur, sint amet dignissimos asperiores</p>
+                <a href="#">contact us</a>
                 </div>
+            </div>
+        </div>
 
-                <div class="food-item-wrap all">
-                    <div class="food-item salad-type">
-                        <div class="item-wrap bottom-up play-on-scroll">
-                            <div class="item-img">
-                                <div class="img-holder bg-img"
-                                    style="background-image: url(assets/anh-nguyen-kcA-c3f_3FE-unsplash.jpg);"></div>
-                            </div>
-                            <div class="item-info">
-                                <div>
-                                    <h3>
-                                        Lorem ipsum
-                                    </h3>
-                                    <span>
-                                        120$
-                                    </span>
-                                </div>
-                                <div class="cart-btn">
-                                    <i class="bx bx-cart-alt"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+    </div>
 
-                    <div class="food-item lorem-type">
-                        <div class="item-wrap bottom-up play-on-scroll">
-                            <div class="item-img">
-                                <div class="img-holder bg-img"
-                                    style="background-image: url('assets/sina-piryae-bBzjWthTqb8-unsplash.jpg');"></div>
-                            </div>
-                            <div class="item-info">
-                                <div>
-                                    <h3>
-                                        Lorem ipsum
-                                    </h3>
-                                    <span>
-                                        120$
-                                    </span>
-                                </div>
-                                <div class="cart-btn">
-                                    <i class='bx bx-cart-alt'></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="food-item ipsum-type">
-                        <div class="item-wrap bottom-up play-on-scroll">
-                            <div class="item-img">
-                                <div class="img-holder bg-img"
-                                    style="background-image: url('assets/jonathan-farber-OCNqOLeCwOc-unsplash.jpg');">
-                                </div>
-                            </div>
-                            <div class="item-info">
-                                <div>
-                                    <h3>
-                                        Lorem ipsum
-                                    </h3>
-                                    <span>
-                                        120$
-                                    </span>
-                                </div>
-                                <div class="cart-btn">
-                                    <i class='bx bx-cart-alt'></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+    <div id="about" class="about">
+        <div class="main-about">
+            <div class="about-content">
+                <div class="about-inner-content">
+                    <img class="myimageabout" src="menu page/images/About us.png" alt="">
+                </div>
+            </div>
 
-                    <div class="food-item lorem-type">
-                        <div class="item-wrap bottom-up play-on-scroll">
-                            <div class="item-img">
-                                <div class="img-holder bg-img"
-                                    style="background-image: url('assets/sina-piryae-bBzjWthTqb8-unsplash.jpg');"></div>
-                            </div>
-                            <div class="item-info">
-                                <div>
-                                    <h3>
-                                        Lorem ipsum
-                                    </h3>
-                                    <span>
-                                        120$
-                                    </span>
-                                </div>
-                                <div class="cart-btn">
-                                    <i class='bx bx-cart-alt'></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <div class="about-content">
+                <div class="about-inner-content">
+                    <div class="about-text-content">
+                        <h1>About us</h1>
+                        <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure sunt assumenda quaerat fugiat nesciunt at, provident quae ipsa! Amet explicabo molestiae perspiciatis ut provident mollitia reprehenderit omnis fuga modi voluptates. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi nisi doloremque officiis alias similique beatae illum necessitatibus aliquam, hic, digniss</p>
 
-                    <div class="food-item dolor-type">
-                        <div class="item-wrap bottom-up play-on-scroll">
-                            <div class="item-img">
-                                <div class="img-holder bg-img"
-                                    style="background-image: url('assets/carly-jayne-Lv174o7fn7Y-unsplash.jpg');"></div>
-                            </div>
-                            <div class="item-info">
-                                <div>
-                                    <h3>
-                                        Lorem ipsum
-                                    </h3>
-                                    <span>
-                                        120$
-                                    </span>
-                                </div>
-                                <div class="cart-btn">
-                                    <i class='bx bx-cart-alt'></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="food-item salad-type">
-                        <div class="item-wrap bottom-up play-on-scroll">
-                            <div class="item-img">
-                                <div class="img-holder bg-img"
-                                    style="background-image: url('assets/anh-nguyen-kcA-c3f_3FE-unsplash.jpg');"></div>
-                            </div>
-                            <div class="item-info">
-                                <div>
-                                    <h3>
-                                        Lorem ipsum
-                                    </h3>
-                                    <span>
-                                        120$
-                                    </span>
-                                </div>
-                                <div class="cart-btn">
-                                    <i class='bx bx-cart-alt'></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="food-item lorem-type">
-                        <div class="item-wrap bottom-up play-on-scroll">
-                            <div class="item-img">
-                                <div class="img-holder bg-img"
-                                    style="background-image: url('assets/sina-piryae-bBzjWthTqb8-unsplash.jpg');"></div>
-                            </div>
-                            <div class="item-info">
-                                <div>
-                                    <h3>
-                                        Lorem ipsum
-                                    </h3>
-                                    <span>
-                                        120$
-                                    </span>
-                                </div>
-                                <div class="cart-btn">
-                                    <i class='bx bx-cart-alt'></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="food-item dolor-type">
-                        <div class="item-wrap bottom-up play-on-scroll">
-                            <div class="item-img">
-                                <div class="img-holder bg-img"
-                                    style="background-image: url('assets/carly-jayne-Lv174o7fn7Y-unsplash.jpg');"></div>
-                            </div>
-                            <div class="item-info">
-                                <div>
-                                    <h3>
-                                        Lorem ipsum
-                                    </h3>
-                                    <span>
-                                        120$
-                                    </span>
-                                </div>
-                                <div class="cart-btn">
-                                    <i class='bx bx-cart-alt'></i>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-    <!-- END FOOD MENU SECTION -->
-    <!-- TESTIMONIAL SECTION -->
-    <section id="testimonial">
-        <div class="container">
-            <div class="row">
-                <div class="col-4 col-xs-12">
-                    <div class="review-wrap zoom play-on-scroll delay-2">
-                        <div class="review-content">
-                            <h2>WHAT PEOPLE SAY ABOUT US</h2>
-                            <p>
-                                Absolutely loved it.
-Amazing food and charismatic chef.
+    </div>
+
+    <div class="quality">
+        <div class="main-quality">
+            <div class="main-inner-quality">
+                <div class="quality-content">
+                    <h1>Our food quality</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam mollitia obcaecati architecto corporis fugit magni molestiae, itaque molestias beatae quas, eveniet nesciunt quia? Molestias, ab error vitae facere quos qui. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi omnis itaque commodi pariatur quia, minima ullam sunt. Sunt, natus magni laborum ipsam, dolor reprehenderit exercitationem consectetur nesciunt error iure odit!</p>
+
+                </div>
+            </div>
+
+            <div class="main-inner-quality">
+                <div class="quality-content qulity-image">
+                    <img src="menu page/images/egg.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
 
 
-                            </p>
+    <div class="gallery">
 
-                            <div class="col-4 col-xs-12">
-                                <div class="review-content">
+        <h1>Gallery</h1>
 
-                                    <div class="review content">
-                                    
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="review-img bg-img"
-                                style="background-image: url(assets/close-up-portrait-cute-young-woman-holding-textbook-colored-pencils-posing-studio-isolated-pink_176532-9674.jpg);">
-                            </div>
-                        </div>
-                        <div class="review-info">
-                            <h3>
-                                Mrs. ITI SHARMA , Noida
-                            </h3>
-                            <div class="rating">
-                                <i class="bx bxs-star"></i>
-                                <i class="bx bxs-star"></i>
-                                <i class="bx bxs-star"></i>
-                                <i class="bx bxs-star"></i>
-                                <i class="bx bxs-star"></i>
-                            </div>
-                        </div>
+        <div class="main-gallery">
+            <div class="inner-gallery">
+                <div class="gallery-image">
+                    <img src="images/gallery1.png" alt="">
+                </div>
+            </div>
+
+            <div class="inner-gallery">
+                <div class="gallery-image">
+                    <img src="images/gallery2.png" alt="">
+                </div>
+            </div>
+
+            <div class="inner-gallery">
+                <div class="gallery-image">
+                    <img src="images/gallery3.png" alt="">
+                </div>
+            </div>
+
+            <div class="inner-gallery">
+                <div class="gallery-image">
+                    <img src="images/gallery4.png" alt="">
+                </div>
+            </div>
+
+            <div class="inner-gallery">
+                <div class="gallery-image">
+                    <img src="images/gallery5.png" alt="">
+                </div>
+            </div>
+
+            <div class="inner-gallery">
+                <div class="gallery-image">
+                    <img src="images/gallery6.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="enjoy-our-food">
+
+        <div class="food-main-content">
+            <h1>enjoy our food</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa quidem sit nostrum pariatur perferendis soluta saepe nam eveniet velit exercitationem iusto, molestias sapiente laborum? Hic, eaque. Voluptatum sit incidunt ipsa.</p>
+        </div>
+
+    </div>
+
+    <div class="our-menu-food">
+        <h1>our menu</h1>
+
+<div class="main-menu-food">
+            <div class="inner-menu-food">
+                <div class="menu-food-content">
+                    <img src="images/menu2.png" alt="">
+
+                    <div class="menu-food-text">
+                        <h2>italian sauce mashroom</h2>
+                        <p> quos animi iusto architecto aliquam dignissimos, molestiae tempora doloremque dolores repellendus! Ab, est voluptatem.</p>
+                        <p> <span>Price / $1.2</span> </p>
                     </div>
                 </div>
-                <div class="col-4 col-xs-12">
-                    <div class="zoom play-on-scroll">
-                        <div class="review-wrap active">
-                            <div class="review-content">
-                                <p>
-                                    Chef Abhimanyu made delicious food. From appetizer to desserts everything was scrumptious. Also had great time management. Food was served on time.
+            </div>
 
-Would definitely recommend chef hire and abhimanyu
+            <div class="inner-menu-food">
+                <div class="menu-food-content">
+                    <img src="images/mwnu1.png" alt="">
 
-
-                                </p>
-                                <div class="review-img bg-img"
-                                    style="background-image: url(assets/michael-dam-mEZ3PoFGs_k-unsplash.jpg);">
-                                </div>
-                            </div>
-                            <div class="review-info">
-                                <h3>
-                                    Ms. Swati Tulsyan, Indore
-                                </h3>
-                                <div class="rating">
-                                    <i class='bx bxs-star'></i>
-                                    <i class='bx bxs-star'></i>
-                                    <i class='bx bxs-star'></i>
-                                    <i class='bx bxs-star'></i>
-                                    <i class='bx bxs-star'></i>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="menu-food-text">
+                        <h2>italian sauce mashroom</h2>
+                        <p> quos animi iusto architecto aliquam dignissimos, molestiae tempora doloremque dolores repellendus! Ab, est voluptatem.</p>
+                        <p> <span>Price / $1.2</span> </p>
                     </div>
                 </div>
+            </div>
 
-                <div class="col-4 col-xs-12">
-                    <div class="review-wrap zoom play-on-scroll delay-4">
-                        <div class="review-content">
-                            <p>
-                              <h2> USP</h2> 
-                              <br> <h3>CUISINE CRAFT:</h3> 
-                               <br> "Craft unforgettable events with top culinary talent. Hire chefs, bartenders, and servers effortlessly"
-                               .<br> 
-                               <br> <h3>BISTROCONNECT</h3>
-                                <br>"Unlock culinary brilliance. Connect with food consultants for culinary projects. Elevate your culinary ventures with us."
-                            </p>
-                            <div class="review-img bg-img"
-                                style="background-image: url(assets/portrait-happy-young-man_171337-21716.jpg);">
-                            </div>
-                        </div>
-                        <div class="review-info">
-                            <h3>
-                                Dil Se Thank You.
-                                MAST!!!
-                                
-                                chefs services
-                                
-                                Thanks team n chef neeraj delicious food .. staters are also very yummy… my 5/5 ⭐️⭐️⭐️⭐️⭐️
-                                
-                                Mrs. Ritu Jani, Indore
-                                
-                                Mrs. Nishi Choudhary, Indore
-                            </h3>
-                            <div class="rating">
-                                <i class='bx bxs-star'></i>
-                                <i class='bx bxs-star'></i>
-                                <i class='bx bxs-star'></i>
-                                <i class='bx bxs-star'></i>
-                                <i class='bx bxs-star'></i>
-                            </div>
-                        </div>
+            <div class="inner-menu-food">
+                <div class="menu-food-content">
+                    <img src="images/menu3.png" alt="">
+
+                    <div class="menu-food-text">
+                        <h2>italian sauce mashroom</h2>
+                        <p>quos animi iusto architecto aliquam dignissimos, molestiae tempora doloremque dolores repellendus! Ab, est voluptatem.</p>
+                        <p> <span>Price / $1.2</span> </p>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-    <!-- END TESTIMONIAL SECTION -->
-    <!-- FOOTER SECTION -->
-    <section class="footer bg-img" style="background-image: url(assets/nordwood-themes-pYWrdKO5ksI-unsplash.jpg);">
-        <div class="container">
-            <div class="row">
-                <div class="col-6 col-xs-12">
-                    <h1>
-                      Cuisine Craft
-                    </h1>
-                    <br>
-                    <p>
-                        ​Know more about us and the magic we create. Reach out to us at:</p>
-                    <br>
-                    <p>BISTROCONNECT  | CUISINE CRAFT | PROF. LEARNING</p>
-                    <p>Tel: 022-69710332</p>
-                    <p>  Email: info@chef-hire.in/p>
-                </div>
-                <div class="col-2 col-xs-12">
-                    <h1>
-                        About us
-                    </h1>
-                    <br>
-                    <p>
-                        <a href="#">
-                            Chefs
-                        </a>
-                    </p>
-                    <p>
-                        <a href="#">
-                            Menu
-                        </a>
-                    </p>
-                    <p>
-                        <a href="#">
-                            Testimonials
-                        </a>
-                    </p>
-                    <p>
-                        <a href="#">
-                            Lorem ipsum
-                        </a>
-                    </p>
-                </div>
-                <div class="col-4 col-xs-12">
-                    <h1>
-                        Subscribe & media
-                    </h1>
-                    <br>
-                    <p>"Chef-Hire aims at making your dining experience memorable with its exquisite delicacies. We believe in the magic of food, the aroma that precedes every dish, the appealing presentation, the burst of textures when you have a mouthful, and the lingering after-taste- food is not just a meal; it is an experience to behold and cherish! With Chef-Hire, events attain a grandeur, meals get a makeover, cooking evolves into an art, and spices become sublime."</p>
-                    <div class="input-group">
-                        <input type="text" placeholder="Enter your email">
-                        <button>
-                            Subscribe
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- END FOOTER SECTION -->
-<!-- loader  -->
- 
-<div class="loader-container">
-    <video src="img/Black Modern Video-Centric YouTube Video  (1).mp4" autoplay muted loop; height="2000"; width="1200"> </video>
-  </div>
-  <!--loader-->
+    </div>
 
-    <script src="js/main.js"></script>
+
+    <div class="before">
+        <img src="images/before footer.png" alt="">
+    </div>
+
+    <div class="footer">
+        <div class="main-footer">
+            <div class="footer-logo"><img src="menu page/images/Chef-Hire-Logo-Final-2.png" alt=""></div>
+        </div>
+
+        <footernav class="footer-navbar">
+            <a href="#">home</a>
+            <a href="#">about</a>
+            <a href="#">our menu</a>
+            <a href="#">clients</a>
+            <a href="#">break</a>
+        </footernav>
+
+    </div>
+
+
+
+<!-- scroll reveal javascript link -->
+
+<script src="https://unpkg.com/scrollreveal"></script>
+
+<!-- javascript link here -->
+
+<script src="menu page/script.js"></script>
 </body>
-
 </html>

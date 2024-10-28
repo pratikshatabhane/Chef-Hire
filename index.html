@@ -292,6 +292,78 @@
             }
         }
       </style>
+      
+          <title>WhatsApp Integration Popup</title>
+          <style>
+              /* Style for popup container */
+              #whatsappPopup {
+                  display: none; /* Hide the popup initially */
+                  position: fixed;
+                  bottom: 20px;
+                  right: 20px;
+                  width: 250px;
+                  background-color: white;
+                  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+                  border-radius: 10px;
+                  padding: 20px;
+                  z-index: 1000;
+              }
+      
+              #whatsappPopup header {
+                  font-size: 18px;
+                  margin-bottom: 15px;
+                  text-align: center;
+                  font-weight: bold;
+              }
+      
+              #whatsappPopup p {
+                  text-align: center;
+                  margin: 0 0 10px 0;
+              }
+      
+              .close-btn {
+                  position: absolute;
+                  top: 5px;
+                  right: 10px;
+                  cursor: pointer;
+                  font-size: 18px;
+              }
+      
+              .whatsapp-btn {
+                  background-color: #109942;
+                  color: white;
+                  padding: 10px;
+                  width: 100%;
+                  border: none;
+                  border-radius: 5px;
+                  cursor: pointer;
+                  font-size: 16px;
+              }
+          </style>
+      </head>
+      <body>
+        <button onclick="togglePopup()" style="position: fixed; bottom: 20px; right: 20px;">Contact Us</button>
+      
+          <div id="whatsappPopup">
+              <span class="close-btn" onclick="togglePopup()">✖</span>
+              <header>Chat with us on WhatsApp</header>
+              <p>Click the button below to start a chat:</p>
+              <a href="https://wa.me/916358819114?text=Hello!%20I%20have%20a%20query." target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon" class="whatsapp-icon">
+            </a>
+          </div>
+      
+          <script>
+              function togglePopup() {
+                  var popup = document.getElementById("whatsappPopup");
+                  if (popup.style.display === "none") {
+                      popup.style.display = "block";
+                  } else {
+                      popup.style.display = "none";
+                  }
+              }
+          </script>
+      
     <!-- FOOD MENU SECTION -->
     <section class="align-items-center bg-img bg-img-fixed" id="food-menu-section"
         style="background-image: url(assets/katherine-chase-4MMK78S7eyk-unsplash.jpg);">
