@@ -165,7 +165,8 @@
                             </h3>
                        
                
-                        <br>Chef-Hire, a brand of TFCS Kitchen Solutions Ltd., is a one-of-its-kind platform that caters to your personalized food and beverage (F&B) needs. 
+                        <br>Chef-Hire, a brand of TFCS Kitchen Solutions Ltd., is a one-of-its-kind platform that caters to 
+                        your personalized food and beverage (F&B) needs. 
                             
                         </p>
                         <div class="left-to-right play-on-scroll delay-4">
@@ -953,13 +954,7 @@
                         </div>
         
                     </div>
-                  
-        
-                
-        
-                    
-        
-                </div>
+                   </div>
         
                 <!--next prev button-->
                 <div class="arrows">
@@ -1218,7 +1213,50 @@ NextCoworks -Ab road Slice 6, aranya nagar scheme 78, vijay nagar,
 </section>
 <!-- END FOOTER SECTION -->
 
+<!-- loader  -->
+ 
+<div class="loader-container">
+    <video src="img/Intro Video.mp4" autoplay muted loop; height="2000"; width="1200"> </video>
+  </div>
+  <!--loader-->
+  <style>
+    
+.loader-container{
+    position: fixed;
+    top:0; left: 0;
+    height:100%;
+    width: 100%;
+    z-index: 100;
+    background:#f7f7f7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+.loader-container.active{
+    display: none;
+    height:180px;
+    width: 150px;
+}
+
+.loader-container img{
+    height:180px;
+    width: 150px;
+}
+  </style>
+  <script>
+    function loader(){
+  document.querySelector('.loader-container').classList.add('active');
+}
+
+function fadeOut() {
+    setTimeout(loader, 4000); // Adjusted to 4000 ms (20 seconds) for quicker fade-out.
+}
+
+window.onload = fadeOut; // Ensure fadeOut is called when the page finishes loading
+
+
+  </script>
 
 
     <script src="js/main.js"></script>
