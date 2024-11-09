@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hangry - Where?</title>
+  <style>
+    /* Add your custom styles here */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #F5F5F5;
+    }
+    input[type="text"] {
+  width: 100%; /* Ensure the input takes up full width on smaller screens */
+  padding: 10px;
+  border: 1px solid #E0E0E0;
+  border-radius: 5px;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  input[type="text"] {
+    /* Adjust width and other properties as needed for smaller screens */
+    width: 90%; /* Or any desired width */
+  }
+}
+
+    header {
+      background-color: #FFFFFF;
+      padding: 20px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      width: 100px;
+    }
+
+    .close-button {
+      border: none;
+      background: none;
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    .progress-bar {
+      height: 5px;
+      background-color: #E0E0E0;
+      margin-top: 10px;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #E0E0E0;
+      border-radius: 5px;
+    }
+
+    .booking-protection ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .booking-protection li {
+      text-align: center;
+    }
+
+    .booking-protection img {
+      width: 30px;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+
+    button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .back-button {
+      background-color: #E0E0E0;
+      color: #666666;
+    }
+
+    .next-button {
+      background-color: #007BFF;
+      color: #FFFFFF;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="hangry-logo.png" alt="Hangry Logo">
+      <button class="close-button">X</button>
+    </div>
+    <div class="progress-bar"></div>
+  </header>
+
+  <main>
+    <h2>Where?</h2>
+    <p>Enter your postcode or city. Available UK-wide.</p>
+    <input type="text" placeholder="Search postcode or city...">
+    <div class="booking-protection">
+      <ul>
+        <li>
+          <img src="booking-protection-icon.png" alt="Booking Protection">
+          <p>Booking protection</p>
+        </li>
+        <li>
+          <img src="fraud-protection-icon.png" alt="Fraud Protection">
+          <p>Fraud protection</p>
+        </li>
+        <li>
+          <img src="free-7-day-cancellation-icon.png" alt="Free 7-day cancellation">
+          <p>Free 7-day cancellation</p>
+        </li>
+        <li>
+          <img src="insurance-cover-icon.png" alt="Insurance cover">
+          <p>Insurance cover</p>
+        </li>
+      </ul>
+    </div>
+    <div class="buttons">
+      <button class="back-button">Back</button>
+      <button class="next-button">Next</button>
+    </div>
+  </main>
+
+  <script>
+    // Add JavaScript for form validation, AJAX requests, etc.
+    const nextButton = document.querySelector('.next-button');
+
+    nextButton.addEventListener('click', () => {
+      // Handle the "Next" button click event
+      // For example, you could redirect to the next page or submit form data

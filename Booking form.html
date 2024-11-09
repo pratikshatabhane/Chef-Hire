@@ -1,222 +1,136 @@
-<div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet">
-    <script src="booking-form.js"></script>
-    <link href="booking-form.css" rel="stylesheet">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Selection</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 600px;
+            margin-top: 50px;
+            text-align: center;
+        }
+        h2 {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        p {
+            color: #888;
+            margin-bottom: 30px;
+        }
+        .event-type {
+            display: inline-block;
+            width: 45%;
+            margin: 10px 2.5%;
+            padding: 15px;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: border-color 0.3s;
+            text-align: center;
+        }
+        .event-type.active {
+            border-color: #333;
+        }
+        .event-type i {
+            font-size: 24px;
+            margin-bottom: 8px;
+        }
+        .event-type span {
+            display: block;
+            font-weight: bold;
+        }
+        .protection-info {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border-top: 1px solid #ddd;
+            font-size: 14px;
+        }
+        .protection-info span {
+            margin: 0 10px;
+        }
+        .btn-next {
+            margin-top: 20px;
+            background-color: #ff4500;
+            color: #fff;
+            border: none;
+            padding: 10px 30px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn-next:disabled {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>What type of event are you planning?</h2>
+    <p>Give us a few details to see chefs, menus and prices. It will take &lt;2min.</p>
     
-    <!-- Static navbar -->
-    <nav class="navbar navbar-default">
-       <div class="container-fluid">
-          <div class="navbar-header">
-             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-             <span class="sr-only">Toggle navigation</span>
-             <span>Book Now!</span>
-             </button>
-             <a class="navbar-brand" href="index.html">
-             <img src="img/Chef-Hire-Logo-Final-2.png" alt="Logo Solodev">
-             </a>
-          </div>
-          <div id="navbar" class="navbar-collapse collapse">
-             <form class="form book-now-form" role="form" id="widget_booking_form" name="widget_booking_form" >
-                <input id="campaign" type="hidden" value="visitflagler_topNavWidget" name="campaign"> <input id="clone_id" type="hidden" value="278" name="clone_id">
-                <div class="form-group">
-                   <label for="lodging">Book Your Chef and Service</label> 
-                   <select class="form-control" id="lodgingID" name="lodgingID" placeholder="All Lodging">
-                      <option value="103" selected="selected">
-                         All Options
-                      </option>
-                      <option value="50">
-                        Menu
-                      </option>
-                      <option value="9">
-                      Chefs
-                      </option>
-                      <option value="21">
-                   Events
-                      </option>
-                      <option value="5">
-                     Staff
-                     <!-- Dropdown for Home -->
-                        <div class="menu-item dropdown">
-                            <a href="index.html">Staff Members</a>
-                            <div class="dropdown-content">
-                                <a href="Contact us.html">Love Sharma</a>
-                                <a href="Contact us.html">Omkesh Parate</a>
-                            </div>
-                        </div>
-            
-                      </option>
-                      <option value="7">
-                        Bartender
-                      </option>
-                      <option value="7">
-                        Personal Chefs
-                      </option>
-                   </select>
-                </div>
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span>Book Now!</span>
-                    </button>
-                   
-                 </div>
-                 <div id="navbar" class="navbar-collapse collapse">
-                    <form class="form book-now-form" role="form" id="widget_booking_form" name="widget_booking_form" >
-                       <input id="campaign" type="hidden" value="visitflagler_topNavWidget" name="campaign"> <input id="clone_id" type="hidden" value="278" name="clone_id">
-                       <div class="form-group">
-                          <label for="lodging">Select Occasion</label> 
-                          <select class="form-control" id="lodgingID" name="lodgingID" placeholder="All Lodging">
-                             <option value="103" selected="selected">
-                          All Types of Occasion
-                             </option>
-                             <option value="50">
-                          Diwali get together
-                             </option>
-                             <option value="9">
-                          Birthday/house party
-                             </option>
-                             <option value="21">
-                          Events
-                             </option>
-                             <option value="5">
-                          Other Occasion
-                          
-                              
-                          </select>
-                       </div>
-                <!--check in element-->
-                <div class="form-group">
-                   <label for="check-in">Check In</label> <!-- <input type="textfield" class="form-control" id="check-in" placeholder="12.20.2014"> -->
-                   <input type="text"  class="form-control" id="start-date" name="start-date" placeholder="mm/dd/yyyy">
-                </div>
-                <!--check out element-->
-                <div class="form-group">
-                   <label for="check-out">Check Out</label> <!-- <input type="textfield" class="form-control" id="check-out" placeholder="12.27.2014"> -->
-                   <input type="text" class="form-control" id="end-date" name="end-date" placeholder="mm/dd/yyyy" >
-                </div>
-                <!--submit-->
-                <div class="form-group">
-                   <button name="Submit" href="#" class="btn btn-sm btn-warning">Search</button>
-                </div>
-             </form>
-          </div>
-          <!--/.nav-collapse -->
-       </div>
-       <!--/.container-fluid -->
-    </nav>
-    <section class="ct_icon_box_section">
-       <div class="container">
-          <div class="ct-section_header ct-section_header--type2">
-             <h2>
-                Booking Form
-             </h2>
-             <div class="ct-section_header-description">
-                Allow your users to book directly on your website with an intutive booking form using jQuery UI.
-             </div>
-             <div class="clearfix">
-                &nbsp;
-             </div>
-             <div class="ct-section_header-separator">
-                &nbsp;
-             </div>
-          </div>
-         <div class="row">
-             <div class="col-md-4 col-sm-6">
-                <div class="ct-icon_box media">
-                   <div class="media-left">
-                      <i class="fa fa-cubes" aria-hidden="true"></i>
-                   </div>
-                   <div class="media-body">
-                      <h3 class="media-heading">
-                     
-                   Personal Chef Service - Hourly
-                      </h3>
-                      <div class="ct-icon_box-content">
-                   Check out our availability and book the date and time that works for you.
-                      </div>
-                   </div>
-                </div>
-             </div>
-             <div class="col-md-4 col-sm-6">
-                <div class="ct-icon_box media">
-                   <div class="media-left">
-                      <i class="fa fa-users" aria-hidden="true"></i>
-                   </div>
-                   <div class="media-body">
-                      <h3 class="media-heading">
-                       Chefs
-                      </h3>
-                      <div class="ct-icon_box-content">
-                         Find the best Chefs for the best price!
-                      </div>
-                   </div>
-                </div>
-             </div>
-             <div class="col-md-4 col-sm-6">
-                <div class="ct-icon_box media">
-                   <div class="media-left">
-                      <i class="fa fa-envelope" aria-hidden="true"></i>
-                   </div>
-                   <div class="media-body">
-                      <h3 class="media-heading">
-                        Menu
-                      </h3>
-                      <div class="ct-icon_box-content">
-                         Choose any Menu on the planet to get you there!
-                      </div>
-                   </div>
-                </div>
-             </div>
-             <div class="col-md-4 col-sm-6">
-                <div class="ct-icon_box media">
-                   <div class="media-left">
-                      <i class="fa fa-hotel" aria-hidden="true"></i>
-                   </div>
-                   <div class="media-body">
-                      <h3 class="media-heading">
-                      Events
-                      </h3>
-                      <div class="ct-icon_box-content">
-                         Let the finest Events lines get you to your destination!
-                      </div>
-                   </div>
-                </div>
-             </div>
-             <div class="col-md-4 col-sm-6">
-                <div class="ct-icon_box media">
-                   <div class="media-left">
-                      <i class="fa fa-user"></i>
-                   </div>
-                   <div class="media-body">
-                      <h3 class="media-heading">
-                        Personal Chefs
-                      </h3>
-                      <div class="ct-icon_box-content">
-                        Book your own Chefs with vacation rentals.
-                      </div>
-                   </div>
-                </div>
-             </div>
-             <div class="col-md-4 col-sm-6">
-                <div class="ct-icon_box media">
-                   <div class="media-left">
-                      <i class="fa food-item" aria-hidden="true"></i>
-                   </div>
-                   <div class="media-body">
-                      <h3 class="media-heading">
-                        Bartender & Barista
-                      </h3>
-                      <div class="ct-icon_box-content">
-                         Create your own vacation bundle and find big savings!
-                      </div>
-                   </div>
-                </div>
-             </div>
-          </div>
-       </div>
-    </section>
+    <div id="eventOptions">
+        <div class="event-type" data-event="Birthday">
+            <i class="bi bi-cake"></i>
+            <span>Birthday</span>
+        </div>
+        <div class="event-type" data-event="Get together">
+            <i class="bi bi-people"></i>
+            <span>Get together</span>
+        </div>
+        <div class="event-type" data-event="Hen/Stag do">
+            <i class="bi bi-martini"></i>
+            <span>Hen / Stag do</span>
+        </div>
+        <div class="event-type" data-event="Anniversary">
+            <i class="bi bi-heart"></i>
+            <span>Anniversary</span>
+        </div>
+        <div class="event-type" data-event="Family event">
+            <i class="bi bi-house"></i>
+            <span>Family event</span>
+        </div>
+        <div class="event-type" data-event="Engagement">
+            <i class="bi bi-bell"></i>
+            <span>Engagement</span>
+        </div>
+    </div>
+    
+    <div class="protection-info">
+        <span>✔ Booking protection</span>
+        <span>✔ Fraud protection</span>
+        <span>✔ Free 7-day cancellation</span>
+        <span>✔ Insurance cover</span>
+    </div>
+    
+    <a href="Booking form -1.html"><button class="btn-next" id="nextButton" disabled>Next</button></a>
+</div>
+
+<script>
+    const eventOptions = document.querySelectorAll('.event-type');
+    const nextButton = document.getElementById('nextButton');
+    let selectedEvent = '';
+
+    eventOptions.forEach(option => {
+        option.addEventListener('click', () => {
+            eventOptions.forEach(opt => opt.classList.remove('active'));
+            option.classList.add('active');
+            selectedEvent = option.getAttribute('data-event');
+            nextButton.disabled = false;
+        });
+    });
+
+    nextButton.addEventListener('click', () => {
+        alert(`Event selected: ${selectedEvent}`);
+        // Proceed to next step or form submission
+    });
+</script>
+
+</body>
+</html>
