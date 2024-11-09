@@ -106,7 +106,7 @@
 <body>
   <header>
     <div class="logo">
-      <img src="hangry-logo.png" alt="Hangry Logo">
+      <img src="img/Chef-Hire-Logo-Final-2.png" alt="Hangry Logo">
       <button class="close-button">X</button>
     </div>
     <div class="progress-bar"></div>
@@ -114,7 +114,7 @@
 
   <main>
     <h2>Where?</h2>
-    <p>Enter your postcode or city. Available UK-wide.</p>
+    <p>Enter your postcode or city. </p>
     <input type="text" placeholder="Search postcode or city...">
     <div class="booking-protection">
       <ul>
@@ -141,7 +141,60 @@
       <button class="next-button">Next</button>
     </div>
   </main>
-
+<script>const express = require('express');
+    const bodyParser = require('body-parser');
+    const mongoose = require('mongoose');
+    
+    const app = express();
+    const port = 3000;
+    
+    // Connect to MongoDB database
+    mongoose.connect('mongodb://localhost/hangry-db', { useNewUrlParser: true, useUnifiedTopology: true })
+      .then(() => console.log('MongoDB connected'))
+      .catch(err => console.error('MongoDB connection error:', err));
+    
+    // Define the User and Booking models
+    const userSchema = new mongoose.Schema({
+      name: String,
+      email: { type: String, unique: true },
+      password: { type: String, required: true }
+    });
+    
+    const bookingSchema = new mongoose.Schema({
+      user: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
+      location: String,
+      date: Date,
+      time: String,
+      numGuests: Number,
+      cuisine: String,
+      specialRequests: String
+    });
+    
+    const User = mongoose.model('User', userSchema);
+    const Booking = mongoose.model('Booking', bookingSchema);
+    
+    // Middleware
+    app.use(bodyParser.json());
+    
+    // API endpoints
+    app.post('/api/register', async (req, res) => {
+      // ... Implement user registration logic
+    });
+    
+    app.post('/api/login', async (req, res) => {
+      // ... Implement user authentication logic
+    });
+    
+    app.post('/api/bookings/create', async (req, res) => {
+      // ... Implement booking creation logic
+    });
+    
+    // ... other API endpoints
+    
+    app.listen(port, () => {
+      console.log(`Server listening on port ${port}`);
+    });
+    </script>
   <script>
     // Add JavaScript for form validation, AJAX requests, etc.
     const nextButton = document.querySelector('.next-button');
