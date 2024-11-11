@@ -103,6 +103,17 @@
             color: #333;
             border: 2px solid #ddd;
         }
+        .otp-section {
+            display: none;
+            margin-top: 20px;
+        }
+        .otp-section input {
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 8px;
+            border: 2px solid #ddd;
+            margin-right: 10px;
+        }
     </style>
 </head>
 <body>
@@ -115,17 +126,24 @@
     <div class="info-section">
         <p>Login or sign up to read reviews and chat with chefs.</p>
         <div class="phone-number-section">
-            <input type="text" placeholder="+91 Phone number">
-            <button class="continue">Continue</button>
+            <input type="text" id="phoneNumber" placeholder="+91 Phone number">
+            <button class="continue" id="continueBtn">Continue</button>
             <p>Confirm your mobile number via SMS</p>
         </div>
     </div>
 
+    <!-- OTP Section -->
+    <div class="otp-section" id="otpSection">
+        <p>Enter OTP sent to your phone:</p>
+        <input type="text" id="otpInput" placeholder="Enter OTP">
+        <button class="continue" id="verifyOtpBtn">Verify OTP</button>
+    </div>
+
     <!-- Continue with social media or email -->
     <div class="options-container">
-        <button class="google">Continue with Google</button>
-        <button class="facebook">Continue with Facebook</button>
-        <button class="email">Continue with Email</button>
+        <button class="google" onclick="alert('Redirecting to Google Login')">Continue with Google</button>
+        <button class="facebook" onclick="alert('Redirecting to Facebook Login')">Continue with Facebook</button>
+        <button class="email" onclick="alert('Redirecting to Email Login')">Continue with Email</button>
     </div>
 
     <!-- Terms and Privacy -->
@@ -141,10 +159,39 @@
 
     <!-- Button to Continue or Back -->
     <div class="btn-container">
-        <button class="back">Back</button>
-        <button class="continue">Continue</button>
+        <button class="back" onclick="window.history.back()">Back</button>
+        <button class="continue" id="finalContinueBtn" style="display: none;">Continue</button>
     </div>
 </div>
+
+<script>
+    document.getElementById("continueBtn").addEventListener("click", function() {
+        const phoneNumber = document.getElementById("phoneNumber").value;
+        if (phoneNumber) {
+            alert("OTP sent to " + phoneNumber);
+            // Simulate sending OTP and show OTP section
+            document.getElementById("otpSection").style.display = "block";
+            document.getElementById("finalContinueBtn").style.display = "none";
+        } else {
+            alert("Please enter a valid phone number.");
+        }
+    });
+
+    document.getElementById("verifyOtpBtn").addEventListener("click", function() {
+        const otp = document.getElementById("otpInput").value;
+        if (otp === "123456") {  // Mock OTP validation
+            alert("OTP Verified! Your event is now booked.");
+            document.getElementById("finalContinueBtn").style.display = "inline-block";
+            document.getElementById("otpSection").style.display = "none";
+        } else {
+            alert("Invalid OTP. Please try again.");
+        }
+    });
+
+    document.getElementById("finalContinueBtn").addEventListener("click", function() {
+        alert("Proceeding to book a chef!");
+    });
+</script>
 
 </body>
 </html>
