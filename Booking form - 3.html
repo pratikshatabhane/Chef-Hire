@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guest Count Selection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: #333;
+        }
+        .container {
+            max-width: 600px;
+            text-align: center;
+            padding: 40px;
+        }
+        h2 {
+            font-weight: bold;
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+        p.description {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 30px;
+        }
+        .counter {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            margin: 20px 0;
+        }
+        .counter button {
+            border: 2px solid #333;
+            border-radius: 50%;
+            width: 35px;
+            height: 35px;
+            font-size: 18px;
+            background-color: white;
+            color: #333;
+            cursor: pointer;
+        }
+        .counter span {
+            margin: 0 15px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .label {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 30px;
+        }
+        .protection-info {
+            margin-top: 20px;
+            padding: 15px 0;
+            background-color: #f9f9f9;
+            border-top: 1px solid #ddd;
+            font-size: 12px;
+            color: #666;
+            display: flex;
+            justify-content: space-around;
+        }
+        .btn-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+        .btn-back, .btn-next {
+            width: 48%;
+            padding: 12px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn-back {
+            background-color: #fff;
+            color: #333;
+            border: 2px solid #ddd;
+        }
+        .btn-next {
+            background-color: #ff4500;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>For how many?</h2>
+    <p class="description">If you have kids under 10, we’d consider two kids to be equal to one adult.</p>
+
+    <!-- Counter Component -->
+    <div class="counter">
+        <button onclick="decrement()">&#8722;</button>
+        <span id="count">8</span>
+        <button onclick="increment()">&#43;</button>
+    </div>
+    <p class="label">Adults</p>
+
+    <div class="protection-info">
+        <span>✔ Booking protection</span>
+        <span>✔ Fraud protection</span>
+        <span>✔ Free 7-day cancellation</span>
+        <span>✔ Insurance cover</span>
+    </div>
+    
+    <div class="btn-container">
+        <button class="btn-back">Back</button>
+       <a href="Booking form -4.html"><button class="btn-next">Next</button></a> 
+    </div>
+</div>
+
+<script>
+    let count = 8;  // Start count at 8 based on your image
+
+    function increment() {
+        count++;
+        document.getElementById('count').innerText = count;
+    }
+
+    function decrement() {
+        if (count > 1) {
+            count--;
+            document.getElementById('count').innerText = count;
+        }
+    }
+</script>
+
+</body>
+</html>

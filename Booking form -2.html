@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image" href="img/Chef-Hire-Logo-Final-2.png">
+    <title>Date Selection</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            text-align: center;
+        }
+        h2 {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        p {
+            color: #888;
+            margin-bottom: 30px;
+        }
+        .calendar {
+            width: 100%;
+            max-width: 350px;
+            margin: 0 auto;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            background-color: #fff;
+        }
+        .notification {
+            margin-top: 20px;
+            background-color: #f0f8ff;
+            color: #333;
+            font-size: 14px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .protection-info {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border-top: 1px solid #ddd;
+            font-size: 14px;
+            display: flex;
+            justify-content: space-around;
+            color: #333;
+        }
+        .btn-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+        .btn-back, .btn-next {
+            width: 45%;
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn-back {
+            background-color: #fff;
+            color: #333;
+            border: 2px solid #ddd;
+        }
+        .btn-next {
+            background-color: #ddd;
+            color: #999;
+        }
+        .btn-next.active {
+            background-color: #ff4500;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>When?</h2>
+    <p>Select the date(s) for which you need a chef</p>
+
+    <!-- Calendar Placeholder -->
+    <div class="calendar">
+        <input type="text" id="datePicker" placeholder="Select Date" class="form-control">
+    </div>
+    
+    <div class="notification">
+        <p><strong>Good news!</strong> 50 chefs available on your date</p>
+    </div>
+
+    <div class="protection-info">
+        <span>✔ Booking protection</span>
+        <span>✔ Fraud protection</span>
+        <span>✔ Free 7-day cancellation</span>
+        <span>✔ Insurance cover</span>
+    </div>
+    
+    <div class="btn-container">
+        <button class="btn-back">Back</button>
+     <a href="Booking form - 3.html"><button class="btn-next active">Next</button></a>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script>
+    // Initialize Flatpickr for date selection
+    flatpickr("#datePicker", {
+        mode: "single",  // Change to "multiple" if multiple date selection is needed
+        inline: true,    // Inline calendar
+        dateFormat: "F j, Y",
+    });
+
+    // Next button logic (Optional)
+    const nextButton = document.querySelector(".btn-next");
+    nextButton.addEventListener("click", () => {
+        alert("Proceeding to the next step");
+        // Logic for the next step
+    });
+</script>
+
+</body>
+</html>

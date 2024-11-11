@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chef Booking Pricing</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            max-width: 800px;
+            padding: 40px;
+            background-color: white;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        h2 {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+        .pricing-options {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 40px;
+        }
+        .pricing-option {
+            background-color: #f9f9f9;
+            border: 2px solid #ddd;
+            padding: 20px;
+            width: 30%;
+            border-radius: 8px;
+            text-align: center;
+            box-sizing: border-box;
+            cursor: pointer;
+        }
+        .pricing-option h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        .pricing-option p {
+            font-size: 16px;
+            margin-bottom: 10px;
+            color: #555;
+        }
+        .pricing-option .price {
+            font-size: 18px;
+            font-weight: bold;
+            color: #ff4500;
+        }
+        .pricing-option .min-spend {
+            font-size: 14px;
+            color: #777;
+        }
+        .pricing-option.selected {
+            background-color: #ffebcd;
+            border: 2px solid #ff4500;
+        }
+        .pricing-info {
+            display: flex;
+            justify-content: space-between;
+            background-color: #f9f9f9;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 8px;
+            font-size: 14px;
+            color: #555;
+        }
+        .btn-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+        .btn-back, .btn-next {
+            width: 48%;
+            padding: 12px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn-back {
+            background-color: #fff;
+            color: #333;
+            border: 2px solid #ddd;
+        }
+        .btn-next {
+            background-color: #ff4500;
+            color: #fff;
+        }
+        .btn-next.disabled {
+            background-color: #ddd;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Pricing</h2>
+    
+    <!-- Pricing Options -->
+    <div class="pricing-options">
+        <div class="pricing-option" data-option="fine-dining">
+            <h3>Fine Dining</h3>
+            <p class="price">₹7,000 - ₹20,000</p>
+            <p class="min-spend">Min spend ₹1,00,000</p>
+        </div>
+        <div class="pricing-option" data-option="casual-dining">
+            <h3>Casual Dining</h3>
+            <p class="price">₹4,000 - ₹7,000</p>
+            <p class="min-spend">Min spend ₹30,000</p>
+        </div>
+        <div class="pricing-option" data-option="celebrity-chefs">
+            <h3>Celebrity Chefs</h3>
+            <p class="price">₹20,000</p>
+            <p class="min-spend">Min spend ₹3,00,000</p>
+        </div>
+    </div>
+
+    <!-- Most Popular Section -->
+    <div class="pricing-info">
+        <span>Most Popular</span>
+        <span>Booking Protection</span>
+        <span>Fraud Protection</span>
+    </div>
+    <div class="pricing-info">
+        <span>✓ Free 7-day Cancellation</span>
+        <span>Insurance Cover</span>
+    </div>
+
+    <!-- Buttons -->
+    <div class="btn-container">
+        <button class="btn-back">Back</button>
+        <a href="Booking form - 6.html"><button class="btn-next disabled" disabled>  Next</button></a>  
+    </div>
+</div>
+
+<script>
+    const pricingOptions = document.querySelectorAll('.pricing-option');
+    const btnNext = document.querySelector('.btn-next');
+
+    // Toggle 'selected' class when an option is clicked
+    pricingOptions.forEach(option => {
+        option.addEventListener('click', () => {
+            // Remove selected class from all options
+            pricingOptions.forEach(opt => opt.classList.remove('selected'));
+
+            // Add selected class to the clicked option
+            option.classList.add('selected');
+
+            // Enable the Next button
+            btnNext.classList.remove('disabled');
+            btnNext.disabled = false;
+        });
+    });
+
+    // Handle the Next button click (for further implementation)
+    btnNext.addEventListener('click', () => {
+        // Example: Proceed to the next step (you can replace this with actual logic)
+        alert('Proceeding to the next step!');
+    });
+</script>
+
+</body>
+</html>
