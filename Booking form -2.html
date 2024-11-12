@@ -103,7 +103,7 @@
     
     <div class="btn-container">
         <button class="btn-back">Back</button>
-     <a href="Booking form - 3.html"><button class="btn-next active"; width="3rem">Next</button></a>
+        <a href="Booking form - 3.html"><button class="btn-next active">Next</button></a>
     </div>
 </div>
 
@@ -111,9 +111,10 @@
 <script>
     // Initialize Flatpickr for date selection
     flatpickr("#datePicker", {
-        mode: "single",  // Change to "multiple" if multiple date selection is needed
-        inline: true,    // Inline calendar
+        mode: "single",       // Change to "multiple" if multiple date selection is needed
+        inline: true,         // Inline calendar
         dateFormat: "F j, Y",
+        minDate: "today"      // Disable past dates
     });
 
     // Next button logic (Optional)
