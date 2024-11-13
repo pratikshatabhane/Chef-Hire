@@ -62,14 +62,14 @@ html {
     margin-left: 1rem;
     padding: .5rem 1.5rem;
     font-weight: 600;
-    color: var(--grey);
+    color: #000;
     transition: .5s ease-in-out;
     cursor: pointer;
 }
 
 .menu-item:hover,
 .menu-item.active {
-    color: var(--white);
+  
     background-color: var(--primary-color);
     border-radius: 1rem;
 }
@@ -149,7 +149,7 @@ section {
 
 .slogan button:hover {
     background-color: var(--primary-color);
-    color: var(--white);
+  
 }
 
 .fullwidth {
@@ -286,6 +286,7 @@ section {
 }
 
 .review-wrap {
+   height: 100%;
     width: 100%;
     padding: 1rem;
     background-color: var(--white);
