@@ -1,0 +1,37 @@
+$(document).ready(function() {
+  $('#sendOtp').on('click', function() {
+    const phone = $('#phone').val();
+    $.post('/send-otp', { phone: phone }, function(response) {
+      if (response.success) {
+        $('.otp-section').show();
+      } else {
+        alert("Error sending OTP");
+      }
+    });
+  });
+
+  $('#verifyOtp').on('click', function() {
+    const otp = $('#otp').val();
+    $.post('/verify-otp', { otp: otp }, function(response) {
+      if (response.success) {
+        $('#locationSection').show();
+      } else {
+        alert("Invalid OTP");
+      }
+    });
+  });
+
+  $('#startLocation').on('click', function() {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(function(position) {
+        $('#locationStatus').text(`Location: ${position.coords.latitude}, ${position.coords.longitude}`);
+        $.post('/start-location', {
+          lat: position.coords.latitude,
+          lon: position.coords.longitude
+        });
+      });
+    } else {
+      alert("Geolocation is not supported by this browser.");
+    }
+  });
+});
