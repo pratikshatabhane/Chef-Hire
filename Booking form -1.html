@@ -2,203 +2,132 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <link rel="shortcut icon" type="image" href="img/Chef-Hire-Logo-Final-2.png">
-  <title>Chef-hire - Where?</title>
+  <title>Chef-Hire - Where?</title>
   <style>
-    /* Add your custom styles here */
+    /* Basic styles */
     body {
       font-family: Arial, sans-serif;
       background-color: #F5F5F5;
     }
-    input[type="text"] {
-  width: 100%; /* Ensure the input takes up full width on smaller screens */
-  padding: 10px;
-  border: 1px solid #E0E0E0;
-  border-radius: 5px;
-}
-
-/* Media query for smaller screens */
-@media (max-width: 768px) {
-  input[type="text"] {
-    /* Adjust width and other properties as needed for smaller screens */
-    width: 90%; /* Or any desired width */
-  }
-}
-
-    header {
-      background-color: #FFFFFF;
-      padding: 20px;
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-    }
-
-    .logo img {
-      width: 100px;
-    }
-
-    .close-button {
-      border: none;
-      background: none;
-      font-size: 20px;
-      cursor: pointer;
-    }
-
-    .progress-bar {
-      height: 5px;
-      background-color: #E0E0E0;
-      margin-top: 10px;
-    }
-
-    main {
-      padding: 20px;
-    }
-
     input[type="text"] {
       width: 100%;
       padding: 10px;
       border: 1px solid #E0E0E0;
       border-radius: 5px;
     }
-
-    .booking-protection ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      justify-content: space-between;
+    header {
+      background-color: #FFFFFF;
+      padding: 20px;
     }
-
-    .booking-protection li {
-      text-align: center;
+    .logo img {
+      width: 100px;
     }
-
-    .booking-protection img {
-      width: 30px;
+    .progress-bar {
+      height: 5px;
+      background-color: #E0E0E0;
+      margin-top: 10px;
     }
-
+    main {
+      padding: 20px;
+    }
     .buttons {
       display: flex;
       justify-content: space-between;
       margin-top: 20px;
     }
-
     button {
+      background-color: chocolate;
+      font-weight: bold;
       padding: 10px 20px;
       border: none;
       border-radius: 5px;
       cursor: pointer;
     }
-
     .back-button {
       background-color: #E0E0E0;
       color: #666666;
     }
-
     .next-button {
-      background-color: #007BFF;
+      background-color: #f34216;
       color: #FFFFFF;
+    }
+    #suggestions div {
+      padding: 10px;
+      background-color: #ffffff;
+      border: 1px solid #E0E0E0;
+      margin-top: 5px;
+      cursor: pointer;
+    }
+    #suggestions div:hover {
+      background-color: #F0F0F0;
     }
   </style>
 </head>
 <body>
   <header>
     <div class="logo">
-      <img src="img/Chef-Hire-Logo-Final-2.png" alt="Hangry Logo">
-      <button class="close-button">X</button>
+      <img src="img/Chef-Hire-Logo-Final-2.png" alt="Chef-Hire Logo">
     </div>
     <div class="progress-bar"></div>
   </header>
 
   <main>
     <h2>Where?</h2>
-    <p>Enter your postcode or city. </p>
-    <input type="text" placeholder="Search postcode or city...">
-    <div class="booking-protection">
-      <ul>
-        <li>
-          <img src="booking-protection-icon.png" alt="Booking Protection">
-          <p>Booking protection</p>
-        </li>
-        <li>
-          <img src="fraud-protection-icon.png" alt="Fraud Protection">
-          <p>Fraud protection</p>
-        </li>
-        <li>
-          <img src="free-7-day-cancellation-icon.png" alt="Free 7-day cancellation">
-          <p>Free 7-day cancellation</p>
-        </li>
-        <li>
-          <img src="insurance-cover-icon.png" alt="Insurance cover">
-          <p>Insurance cover</p>
-        </li>
-      </ul>
-    </div>
+    <p>Enter your postcode or city.</p>
+    <input type="text" id="location-input" placeholder="Search postcode or city...">
+    <div id="suggestions"></div>
+
     <div class="buttons">
-      <button class="back-button">Back</button>
-     <a href="Booking form -2.html"> <button class="next-button">Next</button></a>
+      <a href="Booking form.html"> <button class="btn-back">Back</button></a>
+      <a href="Booking form -2.html"><button class="btn-next disabled">Next</button></a>
     </div>
   </main>
-<script>const express = require('express');
-    const bodyParser = require('body-parser');
-    const mongoose = require('mongoose');
-    
-    const app = express();
-    const port = 3000;
-    
-    // Connect to MongoDB database
-    mongoose.connect('mongodb://localhost/hangry-db', { useNewUrlParser: true, useUnifiedTopology: true })
-      .then(() => console.log('MongoDB connected'))
-      .catch(err => console.error('MongoDB connection error:', err));
-    
-    // Define the User and Booking models
-    const userSchema = new mongoose.Schema({
-      name: String,
-      email: { type: String, unique: true },
-      password: { type: String, required: true }
-    });
-    
-    const bookingSchema = new mongoose.Schema({
-      user: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
-      location: String,
-      date: Date,
-      time: String,
-      numGuests: Number,
-      cuisine: String,
-      specialRequests: String
-    });
-    
-    const User = mongoose.model('User', userSchema);
-    const Booking = mongoose.model('Booking', bookingSchema);
-    
-    // Middleware
-    app.use(bodyParser.json());
-    
-    // API endpoints
-    app.post('/api/register', async (req, res) => {
-      // ... Implement user registration logic
-    });
-    
-    app.post('/api/login', async (req, res) => {
-      // ... Implement user authentication logic
-    });
-    
-    app.post('/api/bookings/create', async (req, res) => {
-      // ... Implement booking creation logic
-    });
-    
-    // ... other API endpoints
-    
-    app.listen(port, () => {
-      console.log(`Server listening on port ${port}`);
-    });
-    </script>
-  <script>
-    // Add JavaScript for form validation, AJAX requests, etc.
-    const nextButton = document.querySelector('.next-button');
 
-    nextButton.addEventListener('click', () => {
-      // Handle the "Next" button click event
-      // For example, you could redirect to the next page or submit form data
+  <script>
+    // List of example locations (can be extended)
+    const locations = [
+      "indore,madhya pradesh",
+      "surat,gujart",
+      "mumbai, maharshtra",
+      "delhi",
+      "ujjain,MP",
+      "Near by Indore",
+      "Vododara,Gujrat",
+      "Ahemdabad",
+      "Hydrabad",
+      "Rajasthan"
+    ];
+
+    const input = document.getElementById('location-input');
+    const suggestionsContainer = document.getElementById('suggestions');
+
+    input.addEventListener('input', () => {
+      const query = input.value.toLowerCase();
+      suggestionsContainer.innerHTML = ''; // Clear previous suggestions
+
+      if (query.length > 1) {
+        // Filter locations based on user input
+        const filteredLocations = locations.filter(location =>
+          location.toLowerCase().includes(query)
+        );
+
+        // Display suggestions
+        filteredLocations.forEach(location => {
+          const div = document.createElement('div');
+          div.textContent = location;
+          div.addEventListener('click', () => {
+            input.value = location; // Set selected location
+            suggestionsContainer.innerHTML = ''; // Clear suggestions
+          });
+          suggestionsContainer.appendChild(div);
+        });
+
+        // Display message if no matches found
+        if (filteredLocations.length === 0) {
+          suggestionsContainer.innerHTML = '<p>No locations found.</p>';
+        }
+      }
+    });
+  </script>
+</body>
+</html>
