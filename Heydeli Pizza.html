@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuisine Craft - Heydeli Pizza</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            color: #333;
+        }
+
+        /* Header Section */
+        .header {
+            background-color: #ff6b6b;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: white;
+        }
+
+        .header .logo {
+            font-weight: bold;
+            font-size: 1.5em;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .restaurant-info {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .restaurant-info h1 {
+            font-size: 1.8em;
+            color: #333;
+        }
+
+        .tabs {
+            display: flex;
+            gap: 15px;
+            margin-top: 10px;
+            border-bottom: 1px solid #e2e2e2;
+        }
+
+        .tabs a {
+            text-decoration: none;
+            color: #777;
+            padding-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .tabs a.active {
+            color: #ff6b6b;
+            border-bottom: 2px solid #ff6b6b;
+        }
+
+        .restaurant-details {
+            margin-top: 15px;
+            font-size: 1em;
+            color: #555;
+        }
+
+        .status {
+            color: green;
+        }
+
+        /* Deals Section */
+        .deals {
+            display: flex;
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .deal-box {
+            background-color: #ffe6e6;
+            padding: 10px;
+            border-radius: 5px;
+            color: #ff6b6b;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            font-size: 0.9em;
+        }
+
+        /* Menu Section */
+        .menu-section {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .menu-section h2 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .menu-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #e2e2e2;
+        }
+
+        .menu-item:last-child {
+            border-bottom: none;
+        }
+
+        .menu-item img {
+            width: 80px;
+            height: 80px;
+            border-radius: 8px;
+            margin-right: 15px;
+        }
+
+        .menu-details {
+            flex: 1;
+            margin-right: 15px;
+        }
+
+        .menu-details h3 {
+            font-size: 1.1em;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .menu-details p {
+            font-size: 0.9em;
+            color: #777;
+        }
+
+        .price-add {
+            text-align: right;
+        }
+
+        .price {
+            font-size: 1.1em;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .add-btn {
+            background-color: #ff6b6b;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <div class="logo">Cuisine Craft</div>
+        <div>Chef-Hire |Cuisine Craft | Offers | Help | Sign In | Cart</div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Restaurant Info -->
+        <div class="restaurant-info">
+            <h1>Heydeli Pizza</h1>
+            <div class="tabs">
+                <a href="#" class="active">Order Online</a>
+                <a href="#">Dineout</a>
+            </div>
+            <div class="restaurant-details">
+                ⭐ 3.9 (7 ratings) • ₹300 for two <br>
+                Pizza, Indian <br>
+                1 Outlet • Indore • 55-60 mins <br>
+                <span class="status">Open now • OPEN TILL 11PM</span>
+            </div>
+        </div>
+
+        <!-- Deals Section -->
+        <div class="deals">
+            <div class="deal-box">Extra ₹25 Off - APPLICABLE ABOVE ₹300</div>
+            <div class="deal-box">10% Off Upto ₹40 - USE TRYNEW</div>
+        </div>
+
+        <!-- Menu Section -->
+        <div class="menu-section">
+            <h2>Recommended</h2>
+            <div class="menu-item">
+                <img src="img/Lunch.jpg" alt="Lunch">
+                <div class="menu-details">
+                    <h3>Lunch</h3>
+                    <p>Adults = 300+</p>
+                    <p>Kids = 290+</p>
+                </div>
+                <div class="price-add">
+                    <p class="price">₹430</p>
+                    <button class="add-btn">ADD</button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="img/Dinner.jpg" alt="Dinner">
+                <div class="menu-details">
+                    <h3>Dinner</h3>
+                    <p>Adults = 300+</p>
+                    <p>Kids = 290+</p>
+                </div>
+                <div class="price-add">
+                    <p class="price">₹450</p>
+                    <button class="add-btn">ADD</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Another Menu Section -->
+        <div class="menu-section">
+            <h2>Classic Veg Pizza</h2>
+            <div class="menu-item">
+                <img src="img/Large Cheese Margherita Pizza.jpg" alt="Medium Mexican Treat Pizza">
+                <div class="menu-details">
+                    <h3>Medium Mexican Treat Pizza</h3>
+                    <p>Onion, Green Chilli, Garlic, Green Peas, Masala, Coriander, Tomato & Cheese</p>
+                </div>
+                <div class="price-add">
+                    <p class="price">₹350</p>
+                    <button class="add-btn">ADD</button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="img/Large Cheese Margherita Pizza.jpg" alt="Regular American Fire Pizza">
+                <div class="menu-details">
+                    <h3>Regular American Fire Pizza</h3>
+                    <p>Sweet Corn, Onion, Green Pepper, Jalapeno, Red Paprika & Cheese</p>
+                </div>
+                <div class="price-add">
+                    <p class="price">₹200</p>
+                    <button class="add-btn">ADD</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

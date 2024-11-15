@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terazza Bar and Kitchen</title>
+  <style>
+    /* Basic styling resets */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #f8f8f8;
+      color: #333;
+    }
+
+    .container {
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    /* Header Section */
+    header {
+      padding: 20px 0;
+      border-bottom: 1px solid #ddd;
+    }
+
+    header h1 {
+      font-size: 2em;
+      color: #d32323;
+    }
+
+    header p {
+      color: #666;
+      margin-top: 5px;
+    }
+
+    .tags, .contact-info {
+      display: flex;
+      gap: 15px;
+      margin-top: 10px;
+      font-size: 0.9em;
+    }
+
+    .tag, .contact-info span {
+      padding: 5px 10px;
+      border-radius: 5px;
+      background-color: #eee;
+      color: #666;
+    }
+
+    .tag.open-now {
+      background-color: #d32323;
+      color: #fff;
+    }
+
+    .rating {
+      display: flex;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .rating div {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-weight: bold;
+      color: #666;
+    }
+
+    .rating div span {
+      background-color: #ffcc00;
+      padding: 3px 8px;
+      border-radius: 3px;
+      color: #333;
+    }
+
+    /* Navigation */
+    .menu {
+      display: flex;
+      gap: 30px;
+      border-bottom: 1px solid #ddd;
+      padding: 15px 0;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .menu a {
+      text-decoration: none;
+      color: #d32323;
+    }
+
+    /* Gallery */
+    .gallery {
+      display: flex;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 50px;
+      border-radius: 5px;
+      object-fit: cover;
+    }
+
+    /* Menu Section */
+    .order-section {
+      margin-top: 30px;
+    }
+
+    .order-section h2 {
+      color: #d32323;
+      font-size: 1.5em;
+      margin-bottom: 10px;
+    }
+
+    .order-options {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .option-item {
+      border: 1px solid #ddd;
+      padding: 15px;
+      border-radius: 5px;
+      width: 250px;
+      background-color: #fff;
+    }
+
+    .option-item h3 {
+      font-size: 1.2em;
+      color: #d32323;
+      margin-bottom: 10px;
+    }
+
+    .option-item p {
+      color: #666;
+      font-size: 0.9em;
+    }
+
+    .option-item .price {
+      color: #333;
+      font-weight: bold;
+    }
+
+    /* Search Box */
+    .search-box {
+      display: flex;
+      gap: 10px;
+      margin-top: 20px;
+      justify-content: center;
+    }
+
+    .search-box input {
+      padding: 10px;
+      width: 200px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    .search-box button {
+      padding: 10px 20px;
+      background-color: #d32323;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Header -->
+    <header>
+      <h1>Terazza Bar and Kitchen</h1>
+      <p>Mexican, North Indian, Italian, Fast Food, Beverages, Desserts, Asian</p>
+      <div class="tags">
+        <span class="tag open-now">Open now - 12noon to 12midnight (Today)</span>
+        <span class="contact-info">
+          <span>📞 Tel: 022-69710332</span>
+          <span>+1 more</span>
+        </span>
+      </div>
+      <div class="rating">
+        <div>
+          <span>4.1</span>
+          1,544 Dining Ratings
+        </div>
+        <div>
+          <span>3.9</span>
+          448 Delivery Ratings
+        </div>
+      </div>
+    </header>
+
+    <!-- Navigation Menu -->
+    <nav class="menu">
+     <a href="Booking form - 9.html">Book a Table</a>
+     <div class="service-card">
+      <img src="img/Dinner Boxes.jpg" alt="Hire a Chef">
+      <h3>Dinner Boxes</h3>
+      <p>Get a private chef for your special events.</p>
+    </div>
+    </nav>
+
+   
+
+    <!-- Search Within Menu -->
+    <div class="search-box">
+      <input type="text" placeholder="Search within menu">
+      <button>Search</button>
+    </div>
+
+    <!-- Order Section -->
+    <section class="order-section">
+      <h2>Order Online</h2>
+      <div class="order-options">
+        <div class="option-item">
+          <h3>Dal Makhani Rice Bowl</h3>
+          <p class="price">₹279</p>
+          <p>Dal Makhani + Jeera Rice + Masala Onions</p>
+        </div>
+        <div class="option-item">
+          <h3>Veg Hakka Noodles with Chilli Paneer</h3>
+          <p class="price">₹349</p>
+          <p>Noodles tossed with a savory blend of soy sauce and chilli sauce, with paneer</p>
+        </div>
+        <!-- Add more menu items here -->
+      </div>
+    </section>
+
+  </div>
+
+  <script>
+    // Placeholder JavaScript for search functionality
+    document.querySelector('.search-box button').addEventListener('click', () => {
+      const searchQuery = document.querySelector('.search-box input').value;
+      alert('Searching for: ' + searchQuery);
+    });
+  </script>
+
+</body>
+</html>

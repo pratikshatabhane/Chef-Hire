@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cuisine Craft - Discover the Best Catering Services</title>
+  <style>
+    /* Basic resets */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      color: #333;
+    }
+
+    .container {
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    /* Hero Section */
+    .hero {
+      background-image: url('images/hero-background.jpg'); /* Replace with your background image */
+      background-size: cover;
+      background-position: center;
+      padding: 50px 0;
+      text-align: center;
+      color: #100f0f;
+    }
+
+    .hero h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+
+    .search-bar {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .search-bar select,
+    .search-bar input {
+      padding: 10px;
+      font-size: 1em;
+    }
+
+    .search-bar button {
+      padding: 10px 20px;
+      background-color: #ff6347;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    /* Services Section */
+    .services {
+      padding: 50px 0;
+      background-color: #fff;
+      text-align: center;
+    }
+
+    .services h2 {
+      margin-bottom: 20px;
+      font-size: 1.8em;
+      color: #ff6347;
+    }
+
+    .service-cards {
+      display: flex;
+      gap: 20px;
+      justify-content: space-around;
+    }
+
+    .service-card {
+      text-align: center;
+      width: 30%;
+    }
+
+    .service-card img {
+      width: 100%;
+      border-radius: 5px;
+    }
+
+    .service-card h3 {
+      margin: 10px 0;
+      font-size: 1.2em;
+      color: #ff6347;
+    }
+
+    /* Collections Section */
+    .collections {
+      padding: 50px 0;
+      background-color: #f9f9f9;
+      text-align: center;
+    }
+
+    .collections h2 {
+      margin-bottom: 20px;
+      font-size: 1.8em;
+      color: #ff6347;
+    }
+
+    .collection-cards {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .collection-card {
+      padding: 15px;
+      background-color: #ff6347;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 150px;
+    }
+
+    /* Locations Section */
+    .locations {
+      padding: 50px 0;
+      text-align: center;
+    }
+
+    .locations h2 {
+      margin-bottom: 20px;
+      font-size: 1.8em;
+      color: #ff6347;
+    }
+
+    .location-tags {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .location-tags span {
+      background-color: #ff6347;
+      color: white;
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <h1>Cuisine Craft</h1>
+      <p>Discover the best chefs and catering services near you</p>
+      <div class="search-bar">
+        <select id="location-select">
+          <option value="default" disabled selected>Select Location</option>
+          <option value="indore">Indore</option>
+          <option value="mumbai">Mumbai</option>
+          <option value="delhi">Delhi</option>
+          <!-- Add more locations as needed -->
+        </select>
+        <style>
+          /* Dropdown style */
+          .dropdown {
+              position: relative;
+              display: inline-block;
+          }
+  
+          .dropdown-content {
+              display: none;
+              position: absolute;
+              background-color: #f9f9f9;
+              min-width: 160px;
+              box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+              z-index: 1;
+          }
+  
+          .dropdown-content a {
+              color: black;
+              padding: 12px 16px;
+              text-decoration: none;
+              display: block;
+          }
+  
+          .dropdown-content a:hover {
+              background-color: #f1f1f1;
+          }
+  
+          .dropdown:hover .dropdown-content {
+              display: block;
+          }
+      </style>
+  </head>
+  <body>
+      <input type="text" id="search" placeholder="Search for chefs, cuisines, or events...">
+  
+      <div class="dropdown">
+          <button>Select Option</button>
+          <div class="dropdown-content">
+              <a href="Terazza Bar and Kitchen.html">Terazza Bar and Kitchen</a>
+              <a href="Heydeli Pizza.html">HeyDeli Pizza</a>
+          </div>
+      </div>
+ 
+        </div>
+        </div>
+        </header>
+
+  <section class="services">
+    <h2>Explore Our Services</h2>
+    <div class="service-cards">
+      <div class="service-card">
+        <img src="img/Gala Dinner.jpg" alt="Hire a Chef">
+       <a href="Booking form - 9.html"> <h3>Gala Dinner</h3></a>
+        <p>Get a private chef for your special events.</p>
+      </div>
+      <div class="service-card">
+        <img src="img/Plan events with us.jpg" alt="Catering Service">
+        <a href="Booking Cuisine booking event.html">  <h3>Plan events with us</h3></a> 
+        <p>Enjoy customized catering services for all events.</p>
+      </div>
+      <div class="service-card">
+        <img src="img/Decore and more.jpg" alt="Live Events">
+        <a href="Booking form - 9.html"> <h3>Decore and more</h3></a>
+        <p>Discover the best live cooking events near you.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="collections">
+    <h2>Our Collections</h2>
+    <div class="collection-cards">
+      <div class="collection-card">Luxury Catering</div>
+      <div class="collection-card">Romantic Dinners</div>
+      <div class="collection-card">Outdoor Events</div>
+      <div class="collection-card">Family Gatherings</div>
+    </div>
+  </section>
+
+  <section class="locations">
+    <h2>Popular Locations</h2>
+    <div class="location-tags">
+      <span>Indore</span>
+      <span>Mumbai</span>
+      <span>Delhi</span>
+      <span>Pune</span>
+      <span>Ahmedabad</span>
+    </div>
+  </section>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('#search-button').click(function() {
+        const location = $('#location-select').val();
+        const query = $('#search').val();
+        const specificOption = $('#specific-options').val();
+        if (location && query && specificOption) {
+          alert('Searching for "' + query + '" in ' + location + ' with option ' + specificOption);
+        } else {
+          alert('Please select a location, enter a search term, and select a specific option.');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
