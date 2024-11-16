@@ -1,8 +1,229 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Cuisine Craft - Discover the Best Catering Services</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chef - Hire</title>
+    <link rel="shortcut icon" type="image" href="img/Chef-Hire-Logo-Final-2.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- MOBILE NAV -->
+    <div class="mb-nav">
+        <div class="mb-move-item"></div>
+        <div class="mb-nav-item active">
+            <a href="#home">
+                <i class="bx bxs-home"></i>
+            </a>
+        </div>
+        <div class="mb-nav-item">
+            <a href="#about">
+                <i class='bx bxs-wink-smile'></i>
+            </a>
+        </div>
+        <div class="mb-nav-item">
+            <a href="#food-menu-section">
+                <i class='bx bxs-food-menu'></i>
+            </a>
+        </div>
+        <div class="mb-nav-item">
+            <a href="#testimonial">
+                <i class='bx bxs-comment-detail'></i>
+            </a>
+        </div>
+    </div>
+    <!-- END MOBILE NAV -->
+    <!-- BACK TO TOP BTN -->
+    <a href="#home" class="back-to-top">
+        <i class="bx bxs-to-top"></i>
+    </a>
+    <!-- END BACK TO TOP BTN -->
+ <!-- TOP NAVIGATION -->
+<div class="nav">
+    <div class="menu-wrap">
+        <a href="index.html">
+            <div class="logo">
+                <img src="img/cuisine logo.png" height="150" width="190">
+            </div>
+        </a>
+        <div class="menu h-xs">
+            <!-- Dropdown for Home -->
+            <div class="menu-item dropdown">
+                <a href="index.html">Home</a>
+                <div class="dropdown-content">
+                    <a href="BistroConnect.html">BistroConnect</a>
+                    <a href="Cuisine craft Demo.html">Cuisine Craft</a>
+                </div>
+            </div>
+            
+
+            <!-- Dropdown for About -->
+            <div class="menu-item dropdown">
+                <a href="About.html">About</a>
+                <div class="dropdown-content">
+                    <a href="Our Team.html">Our Team</a>
+                  
+                </div>
+            </div>
+
+            <!-- Dropdown for Join Us -->
+            <div class="menu-item dropdown">
+                <a href="Join Us As Chef.html">Join Us</a>
+                <div class="dropdown-content">
+                    <a href="Join Us As Chef.html">Join Us As Chef  </a>
+                    <a href="">Join us as F&B Consultant</a>
+                    <a href="">Join Us as Event Managers</a>
+                   
+                </div>
+            </div>
+
+          
+
+            <!-- Dropdown for Contact Us -->
+            <div class="menu-item dropdown">
+                <a href="Contact us.html">Contact Us</a>
+                <div class="dropdown-content">
+                    <a href="Investor Relationship.html">Investor Relationship</a>
+                  
+                </div>
+            </div>
+        </div>
+        <div class="left">
+            <div class="cart-btn">
+                <i class='bx bx-cart-alt'></i>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END TOP NAVIGATION -->
+
+<!-- Dropdown Menu Styles -->
+<style>
+.menu-item {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 190px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #000;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #fff;
+}
+
+.menu-item:hover .dropdown-content {
+    display: block;
+}
+</style>
+
+   
+
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+
+          <title>WhatsApp Integration Popup</title>
+          <style>
+              /* Style for popup container */
+              #whatsappPopup {
+                  display: none; /* Hide the popup initially */
+                  position: fixed;
+                  bottom: 20px;
+                  right: 20px;
+                  width: 250px;
+                  background-color: white;
+                  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+                  border-radius: 10px;
+                  padding: 20px;
+                  z-index: 1000;
+              }
+      
+              #whatsappPopup header {
+                  font-size: 18px;
+                  margin-bottom: 15px;
+                  text-align: center;
+                  font-weight: bold;
+              }
+      
+              #whatsappPopup p {
+                  text-align: center;
+                  margin: 0 0 10px 0;
+              }
+      
+              .close-btn {
+                  position: absolute;
+                  top: 5px;
+                  right: 10px;
+                  cursor: pointer;
+                  font-size: 18px;
+              }
+      
+              .whatsapp-btn {
+                  background-color: #109942;
+                  color: white;
+                  padding: 10px;
+                  width: 100%;
+                  border: none;
+                  border-radius: 5px;
+                  cursor: pointer;
+                  font-size: 16px;
+              }
+          </style>
+      </head>
+      <body>
+        <button onclick="togglePopup()" style="position: fixed; bottom: 20px; right: 20px;">Contact Us</button>
+      
+          <div id="whatsappPopup">
+              <span class="close-btn" onclick="togglePopup()">✖</span>
+              <header>Chat with us on WhatsApp</header>
+              <p>Click the button below to start a chat:</p>
+              <a href="https://wa.me/919238349244?text=Hello!%20I%20have%20a%20query." target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon" class="whatsapp-icon"; height="70" width="70">
+            </a>
+          </div>
+      
+          <script>
+              function togglePopup() {
+                  var popup = document.getElementById("whatsappPopup");
+                  if (popup.style.display === "none") {
+                      popup.style.display = "block";
+                  } else {
+                      popup.style.display = "none";
+                  }
+              }
+          </script>
+      
+
+  
+      <title>Cuisine Craft - Discover the Best Catering Services</title>
   <style>
     /* Basic resets */
     * {
@@ -153,6 +374,11 @@
 <body>
   <header class="hero">
     <div class="container">
+      <a href="index.html">
+        <div class="logo">
+            <img src="img/cuisine log.png" height="150" width="190">
+        </div>
+    </a>
       <h1>Cuisine Craft</h1>
       <p>Discover the best chefs and catering services near you</p>
       <div class="search-bar">
@@ -216,17 +442,26 @@
       <div class="service-card">
         <img src="img/Gala Dinner.jpg" alt="Hire a Chef">
        <a href="Booking form - 9.html"> <h3>Gala Dinner</h3></a>
-        <p>Get a private chef for your special events.</p>
+        <p>Enjoy customized catering services for all events.</p>
       </div>
       <div class="service-card">
         <img src="img/Plan events with us.jpg" alt="Catering Service">
         <a href="Booking Cuisine booking event.html">  <h3>Plan events with us</h3></a> 
         <p>Enjoy customized catering services for all events.</p>
       </div>
-      <div class="service-card">
+      </div>
+      </section>
+      <section>
+        <div class="service-cards">
+          <div class="service-card">
         <img src="img/Decore and more.jpg" alt="Live Events">
         <a href="Booking form - 9.html"> <h3>Decore and more</h3></a>
-        <p>Discover the best live cooking events near you.</p>
+        <p>Enjoy customized catering services for all events.</p>
+      </div>
+      <div class="service-card">
+        <img src="img/join with us as.jpg" alt="Live Events">
+        <a href="Booking form - 9.html"> <h3>Join with us as a partners</h3></a>
+        <p>Onboarding with our parteners.</p>
       </div>
     </div>
   </section>
@@ -267,5 +502,196 @@
       });
     });
   </script>
+        
+
+        <script>
+          var nextBtn = document.querySelector('.next'),
+    prevBtn = document.querySelector('.prev'),
+    carousel = document.querySelector('.carousel'),
+    list = document.querySelector('.list'), 
+    item = document.querySelectorAll('.item'),
+    runningTime = document.querySelector('.carousel .timeRunning') 
+
+let timeRunning = 3000 
+let timeAutoNext = 7000
+
+nextBtn.onclick = function(){
+    showSlider('next')
+}
+
+prevBtn.onclick = function(){
+    showSlider('prev')
+}
+
+let runTimeOut 
+
+let runNextAuto = setTimeout(() => {
+    nextBtn.click()
+}, timeAutoNext)
+
+
+function resetTimeAnimation() {
+    runningTime.style.animation = 'none'
+    runningTime.offsetHeight /* trigger reflow */
+    runningTime.style.animation = null 
+    runningTime.style.animation = 'runningTime 7s linear 1 forwards'
+}
+
+
+function showSlider(type) {
+    let sliderItemsDom = list.querySelectorAll('.carousel .list .item')
+    if(type === 'next'){
+        list.appendChild(sliderItemsDom[0])
+        carousel.classList.add('next')
+    } else{
+        list.prepend(sliderItemsDom[sliderItemsDom.length - 1])
+        carousel.classList.add('prev')
+    }
+
+    clearTimeout(runTimeOut)
+
+    runTimeOut = setTimeout( () => {
+        carousel.classList.remove('next')
+        carousel.classList.remove('prev')
+    }, timeRunning)
+
+
+    clearTimeout(runNextAuto)
+    runNextAuto = setTimeout(() => {
+        nextBtn.click()
+    }, timeAutoNext)
+
+    resetTimeAnimation() // Reset the running time animation
+}
+        </script>
+
+ <!-- FOOTER SECTION -->
+ <section class="footer bg-img" style="background-image: url(projects/backgroundq.png);">
+    <div class="container">
+        <div class="row">
+         
+            <div class="col-6 col-xs-12">
+       
+                    <div class="logo">
+                        <img src="img/cuisine log.png" height="150" width="190">
+                    </div> 
+             
+               
+          
+                <p>
+                 Reach out to us at:</p>
+       
+                <p>BISTROCONNECT  | CUISINE CRAFT | CHEF-HIRE</p>
+             <br>  Registered Office Address: 
+                 <br> 410 Divya plaza; Near kamalanagar lake ajawa road village vadodara; vadodara ,Gujrat 390019
+                  <br> <p>📞: 022-69710332
+                  <br>     📧 : info@chef-hire.in</p>
+                    <br><p> Regional Office Address (Indore):
+                        <br>TFCS Kichen Solutions Ltd.
+NextCoworks -Ab road Slice 6, aranya nagar scheme 78, vijay nagar,
+ indore 452010
+ <br> 📞: 022-69710332  
+ <br> Investor relations 📞: 18005700250
+ <br>   📧 : investorcare@chef-hire.in
+</p>
+
+            </div>
+            <div class="col-2 col-xs-12">
+                <h1>
+                    About us
+                </h1>
+                <br>
+                <p>
+                    <a href="About.html">
+                        Chefs
+                    </a>
+                </p>
+                <p>
+                    <a href="Menu.html">
+                        Menu
+                    </a>
+                </p>
+                <p>
+                    <a href="Join us.html">
+                       Join us
+                    </a>
+                </p>
+                <p>
+                    <a href="#">
+                     Policy
+                    </a>
+                </p>
+                <p>
+                    <a href="#">
+                   FAQ's
+                    </a>
+                </p>
+            </div>
+            <div class="col-4 col-xs-12">
+                <h1>
+                    Subscribe & media
+                </h1>
+                <br>
+                <p>"Chef-Hire aims at making your dining experience memorable with its exquisite delicacies. We believe in the magic of food, the aroma that precedes every dish, the appealing presentation, the burst of textures when you have a mouthful, and the lingering after-taste- food is not just a meal; it is an experience to behold and cherish! With Chef-Hire, events attain a grandeur, meals get a makeover, cooking evolves into an art, and spices become sublime."</p>
+                <div class="input-group">
+                    <input type="text" placeholder="Enter your email">
+                    <a href="https://youtu.be/w9EjOsB7JGE?si=6fL6efuukRP0ZZ41">  <button>
+                        Subscribe
+                    </button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- END FOOTER SECTION -->
+
+<!-- loader  -->
+ 
+<div class="loader-container">
+    <video src="img/Intro Video.mp4" autoplay muted loop; height="2000"; width="1200"> </video>
+  </div>
+  <!--loader-->
+  <style>
+    
+.loader-container{
+    position: fixed;
+    top:0; left: 0;
+    height:100%;
+    width: 100%;
+    z-index: 100;
+    background:#f7f7f7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loader-container.active{
+    display: none;
+    height:180px;
+    width: 150px;
+}
+
+.loader-container img{
+    height:180px;
+    width: 150px;
+}
+  </style>
+  <script>
+    function loader(){
+  document.querySelector('.loader-container').classList.add('active');
+}
+
+function fadeOut() {
+    setTimeout(loader, 4000); // Adjusted to 4000 ms (20 seconds) for quicker fade-out.
+}
+
+window.onload = fadeOut; // Ensure fadeOut is called when the page finishes loading
+
+
+  </script>
+
+
+    <script src="js/main.js"></script>
 </body>
+
 </html>
